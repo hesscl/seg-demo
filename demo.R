@@ -10,7 +10,7 @@ library(OasisR)
 ncdb <- read_dta("H:/seg-demo/ncdb.dta")
 
 #for ease of reference later
-cbsa_names <- read_csv("./cbsa2fipsxw.csv") %>%
+cbsa_names <- read_csv("H:/seg-demo/cbsa2fipsxw.csv") %>%
   mutate(CBSA = cbsacode,
          CBSA = ifelse(CBSA == 31080, 31100, CBSA), #Los Angeles CBSA
          CBSA = ifelse(CBSA == 46520, 26180, CBSA), #Honolulu CBSA
